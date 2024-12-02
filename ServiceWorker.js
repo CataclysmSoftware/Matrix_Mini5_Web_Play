@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-Mini 5-0.1.0";
 const contentToCache = [
     "Build/Mini5_WEB_Play.loader.js",
-    "Build/Mini5_WEB_Play.framework.js.unityweb",
-    "Build/Mini5_WEB_Play.data.unityweb",
-    "Build/Mini5_WEB_Play.wasm.unityweb",
+    "Build/Mini5_WEB_Play.framework.js",
+    "Build/Mini5_WEB_Play.data",
+    "Build/Mini5_WEB_Play.wasm",
     "TemplateData/style.css"
 
 ];
