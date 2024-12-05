@@ -59,15 +59,21 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Mini5_WEB_Play.loader.js";
       var config = {
-        arguments: [],
-        dataUrl: buildUrl + "/Mini5_WEB_Play.data.gz",
-        frameworkUrl: buildUrl + "/Mini5_WEB_Play.framework.js.gz",
-        codeUrl: buildUrl + "/Mini5_WEB_Play.wasm.gz",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Mini 5",
-        productVersion: "0.1.0",
-        showBanner: unityShowBanner,
+          arguments: [],
+          dataUrl: buildUrl + "/Mini5_WEB_Play.data.gz",
+          frameworkUrl: buildUrl + "/Mini5_WEB_Play.framework.js.gz",
+          codeUrl: buildUrl + "/Mini5_WEB_Play.wasm.gz",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "DefaultCompany",
+          productName: "Mini 5",
+          productVersion: "0.1.0",
+          showBanner: unityShowBanner,
+          locateFile: function (file) {
+              if (file.endsWith(".data")) return file + ".gz";
+              if (file.endsWith(".framework.js")) return file + ".gz";
+              if (file.endsWith(".wasm")) return file + ".gz";
+              return file;
+          }
       };
 
       // By default Unity keeps WebGL canvas render target size matched with
